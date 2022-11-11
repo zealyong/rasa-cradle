@@ -6,7 +6,7 @@ from rasa.core.agent import Agent
 app = Flask(__name__)
 
 # rasa model agent
-agent = Agent.load(model_path="zy_test/20221111-110129-rosy-commander.tar.gz")
+agent = Agent.load(model_path="model_zy/20221111-155928-moist-specular.tar.gz")
 
 
 @app.route("/model/parse", methods=["POST"])
