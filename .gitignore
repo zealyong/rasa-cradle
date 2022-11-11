@@ -131,3 +131,5 @@ dmypy.json
 .rasa
 .idea
 models
+*.out
+model*
