@@ -29,9 +29,18 @@ stories:
   - intent: deny
   - action: utter_goodbye
 
-- story: wiz test
+#- story: wiz test
+#  steps:
+#  - intent: greet
+#  - action: utter_greet
+#  - intent: wiz_developer
+#  - action: utter_wiz
+#  - intent: mood_great
+#  - action: utter_welcome
+
+- story: wiz test2
   steps:
   - intent: wiz_developer
   - action: utter_wiz
-  - intent: greet
-  - action: utter_greet
+  - intent: mood_great
+  - action: utter_welcome

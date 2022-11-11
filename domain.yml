@@ -33,6 +33,9 @@ responses:
   utter_wiz:
   - text: "I know you are from wiz."
 
+  utter_welcome:
+  - text: "Welcome to wiz"
+
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
