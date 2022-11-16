@@ -1,7 +1,9 @@
 import json
+import time
+import asyncio
 
-from flask import Flask, request, Response
 from rasa.core.agent import Agent
+from flask import Flask, request, Response
 
 app = Flask(__name__)
 
@@ -18,6 +20,18 @@ async def get_intent():
     data = json.loads(request.data)
     ret = await agent.handle_text(data.get("text"))
     return Response(str(ret))
+
+
+@app.route("/sleep", methods=["GET"])
+def test_sleep():
+    time.sleep(5)
+    return Response("sleep 5 secs")
+
+
+@app.route("/async_sleep", methods=["GET"])
+async def test_async_sleep():
+    await asyncio.sleep(5)
+    return Response("sleep 5 secs")
 
 
 if __name__ == '__main__':
